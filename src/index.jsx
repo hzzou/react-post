@@ -1,11 +1,13 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
-import './flexible.debug';
-import './index.styl';
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./App";
+import "./index.scss";
 
+const hacks = require("viewport-units-buggyfill/viewport-units-buggyfill.hacks");
 
-ReactDOM.render(
-  <App/>,
-  document.querySelector("#root")
-)
+//解决兼容问题
+require("viewport-units-buggyfill").init({
+  hacks: hacks
+});
+
+ReactDOM.render(<App />, document.querySelector("#root"));

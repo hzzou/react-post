@@ -9,7 +9,7 @@ class NotFound extends React.Component {
   render () {
     return (
       <div className="a">
-        这是A组件
+        这是NotFound组件
       </div>
     )
   }

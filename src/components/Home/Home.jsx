@@ -1,21 +1,31 @@
 import React from 'react';
-import NotFound from '../NotFound/NotFound';
-import './Home.styl';
+import {Link} from 'react-router-dom';
+import './Home.scss';
+
+
 class Home extends React.Component{
+
   constructor(props){
-    super(props);
-    this.state = {};
+    super(props)
+
+    this.state = {
+      name: 'hzlzh'
+    }
   }
 
   render(){
-    console.log(<NotFound/>)
-    console.log(<NotFound><div>A组件包裹的内容</div></NotFound>)
-    return(
+    const {name} = this.state;
+    return (
       <div className="home">
-        这是Home组件
-
+        <header className="header">这是Home组件 {name}</header>
+        <div className="body">
+          <Link to="/hookcom" >
+            跳转到Hooks组件
+          </Link>
+        </div>
       </div>
-    )
+    );
+    
   }
 }
 

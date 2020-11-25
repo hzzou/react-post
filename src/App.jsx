@@ -1,11 +1,9 @@
-import React from 'react';
-import Route from './route/index';
-class App extends React.Component{
+import React from "react";
+import Route from "./route/index";
 
-  render(){
-    return(
-      <Route/>
-    )
+class App extends React.Component {
+  render() {
+    return <Route />;
   }
 }
 
